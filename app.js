@@ -7,7 +7,6 @@ const templateCart = document.getElementById('template-cart').content
 const fragment = document.createDocumentFragment()
 let cart = {}
 
-
 //Event
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
@@ -111,6 +110,10 @@ const showFooterCart = () =>{
     btnClear.addEventListener('click',() => {
         cart = {}
         showCart()
+        swal({
+            icon: "success",
+            title: "Carrito vaciado con exito!"
+        });
     })
 }
 
